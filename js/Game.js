@@ -4,7 +4,7 @@
 class Game {
     constructor(phrase){
         this.missed = 0;
-        this.phrase = [];
+        this.phrases = [];
         this.activePhrase = null;
     }
 }
