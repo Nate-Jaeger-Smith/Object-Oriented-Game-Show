@@ -3,7 +3,7 @@ class Phrase {
         this.phrase = phrase.toLowerCase()
     }
     
-    
+
     addPhraseToDisplay(){
         const phraseDivUl = document.querySelector('#phrase ul');
         const phraseArray = [...this.phrase];
@@ -11,10 +11,10 @@ class Phrase {
         phraseArray.forEach( letter => {
             if (letter !== ' ') {
                 let letterLi = `<li class="hide letter ${letter}">${letter}</li>`;
-                phraseDivUl.insertAdjacentElement('beforeend', letterLi);
+                phraseDivUl.insertAdjacentHTML('beforeend', letterLi);
             } else {
                 let spaceLi = `<li class="space"> </li>`;
-                phraseDivUl.insertAdjacentElement('beforeend', spaceLi);
+                phraseDivUl.insertAdjacentHTML('beforeend', spaceLi);
             }
         });
     }
