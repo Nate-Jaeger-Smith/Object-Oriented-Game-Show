@@ -2,7 +2,7 @@
  * Project 4 - OOP Game App
  * Game.js */
 class Game {
-    constructor(phrase){
+    constructor(){
         this.missed = 0;
         this.phrases = [
             {
@@ -23,4 +23,10 @@ class Game {
         ];
         this.activePhrase = null;
     }
+
+    getRandomPhrase(){
+        const randomNumber = Math.floor( Math.random() * this.phrases.length );
+        return this.phrases[randomNumber].phrase;
+    }
+    
 }
