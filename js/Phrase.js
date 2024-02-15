@@ -3,7 +3,9 @@ class Phrase {
         this.phrase = phrase.toLowerCase()
     }
     
-
+    /**
+    * Display phrase on game board
+    */
     addPhraseToDisplay(){
         const phraseDivUl = document.querySelector('#phrase ul');
         const phraseArray = [...this.phrase];
@@ -20,7 +22,7 @@ class Phrase {
     }
 
     checkLetter(){
-
+        
     }
 
     showMatchedLetter(){

@@ -13,11 +13,18 @@ class Game {
         this.activePhrase = null;
     }
 
+    /**
+    * Selects random phrase from phrases property
+    * @return {Object} Phrase object chosen to be used
+    */
     getRandomPhrase(){
         const randomNumber = Math.floor( Math.random() * this.phrases.length );
         return this.phrases[randomNumber];
     }
     
+    /**
+    * Begins game by selecting a random phrase and displaying it to user
+    */
     startGame(){
         const overlay = document.getElementById('overlay');
         overlay.style.display = 'none';
