@@ -29,7 +29,16 @@ class Phrase {
         return this.phrase.includes(letter);
     }
 
-    showMatchedLetter(){
-
+    /**
+    * Displays passed letter on screen after a match is found
+    * @param (string) letter - Letter to display
+    */
+    showMatchedLetter(letter){
+        const matchedLetters = document.getElementsByClassName(letter);
+        
+        [...matchedLetters].forEach( letter => {
+            letter.classList.remove('hide');
+            letter.classList.add('show');
+        });
     }
 };
