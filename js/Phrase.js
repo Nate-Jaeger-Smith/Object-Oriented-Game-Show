@@ -21,8 +21,12 @@ class Phrase {
         });
     }
 
-    checkLetter(){
-        
+    /**
+    * Checks if passed letter is in phrase
+    * @param (string) letter - Letter to check
+    */
+    checkLetter(letter){
+        return this.phrase.includes(letter);
     }
 
     showMatchedLetter(){
