@@ -59,7 +59,26 @@ class Game {
     gameOver(gameWon){
         const gameOverMessage = overlay.querySelector('#game-over-message');
         overlay.setAttribute('class', gameWon ? 'win' : 'lose');
-        gameOverMessage.textContent = gameWon ? "Congratulations! You've won!" : "Better luck next time!" ;
+        gameOverMessage.textContent = gameWon ? "Congratulations! You've won!" : "Sorry, better luck next time!" ;
         overlay.style.display = '';
+    }
+
+    /**
+    * Handles onscreen keyboard button clicks
+    * @param (HTMLButtonElement) button - The clicked button element
+    */
+    handleInteraction(button) {
+        const phrase = this.activePhrase;
+        const letter = button.textContent;
+        button.disabled = true;
+        
+        if (phrase.checkLetter(letter)) {
+            phrase.showMatchedLetter(letter);
+            button.classList.add('chosen');
+            this.checkForWin() ? this.gameOver(true) : null ;
+        } else {
+            button.classList.add('wrong');
+            this.removeLife();
+        }
     }
 }

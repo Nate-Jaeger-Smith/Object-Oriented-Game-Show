@@ -13,8 +13,7 @@ startButton.addEventListener('click', e => {
 });
 
 keyboard.addEventListener('click', e => {
-
     if (e.target.tagName === 'BUTTON') {
-        const letter = e.target.textContent;
+        game.handleInteraction(e.target);
     }
 });
