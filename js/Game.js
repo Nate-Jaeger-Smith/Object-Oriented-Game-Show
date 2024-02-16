@@ -46,7 +46,7 @@ class Game {
     * Checks if player has remaining lives and ends game if player is out
     */
     removeLife(){
-        let lives = document.getElementsByTagName('img');
+        const lives = document.getElementsByTagName('img');
         lives[this.missed].setAttribute('src', 'images/lostHeart.png');
         this.missed += 1;
         this.missed === 5 ? this.gameOver(false) : null ;

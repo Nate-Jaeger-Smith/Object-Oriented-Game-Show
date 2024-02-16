@@ -1,9 +1,5 @@
-/* Treehouse FSJS Techdegree
- * Project 4 - OOP Game App
- * app.js */
-
-const startButton = document.getElementById('btn__reset'),
-    keyboard = document.getElementById('qwerty');
+const startButton = document.getElementById('btn__reset');
+const keyboard = document.getElementById('qwerty');
 let game;
 
 
