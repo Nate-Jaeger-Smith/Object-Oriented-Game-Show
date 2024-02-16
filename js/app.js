@@ -16,10 +16,8 @@ keyboard.addEventListener('click', e => {
 });
 
 /**
- * Reset game for next round
- * Clear on-screen keyboard
- * Clear previous phrase display
- * Set health back to full
+ * Resets the game by enabling all keyboard keys, clearing the phrase,
+ * and resetting the heart images
  */
 function resetGame(){
     const keys = keyboard.getElementsByClassName('key');
