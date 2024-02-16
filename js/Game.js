@@ -1,6 +1,6 @@
-/* Treehouse FSJS Techdegree
- * Project 4 - OOP Game App
- * Game.js */
+const overlay = document.getElementById('overlay');
+
+
 class Game {
     constructor(){
         this.missed = 0;
@@ -26,7 +26,6 @@ class Game {
     * Begins game by selecting a random phrase and displaying it to user
     */
     startGame(){
-        const overlay = document.getElementById('overlay');
         overlay.style.display = 'none';
         this.activePhrase = this.getRandomPhrase();
         this.activePhrase.addPhraseToDisplay();
@@ -50,10 +49,22 @@ class Game {
         let lives = document.getElementsByTagName('img');
         lives[this.missed].setAttribute('src', 'images/lostHeart.png');
         this.missed += 1;
-        this.missed === 5 ? this.gameOver() : null;
+        this.missed === 5 ? this.gameOver(false) : null ;
     }
 
-    gameOver(){
-        
+    /**
+    * Displays game over message
+    * @param {boolean} gameWon - Whether or not the user won the game
+    */
+    gameOver(gameWon){
+        const gameOverMessage = overlay.querySelector('#game-over-message');
+        if (gameWon) {
+            gameOverMessage.textContent = "Congratulations! You've won!"
+            overlay.setAttribute('class', 'win');
+        } else {
+            gameOverMessage.textContent = "Better luck next time!"
+            overlay.setAttribute('class', 'lose');
+        }
+        overlay.style.display = '';
     }
 }
