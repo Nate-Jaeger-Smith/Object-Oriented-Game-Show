@@ -179,6 +179,8 @@ button {
 
 .title {
   color: #FFF;
+  font-family: American Typewriter, serif;
+  font-weight: normal;
 }
 
 .start {
