@@ -26,6 +26,7 @@ This game relies on the following technologies:
 - Added box shadows to phrase Li elements
 - Start overlay background-image is a color gradient
 - Lose overlay is a darker red
+- Font family of H2 overlay changed
 
 ## Acknowledgments
 
