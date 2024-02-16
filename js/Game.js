@@ -7,8 +7,8 @@ class Game {
         this.phrases = [ new Phrase('A red herring'),
             new Phrase('Cool as ice'),
             new Phrase('Ahead of the curve'),
-            new Phrase('It suddenly dawned on me'),
-            new Phrase('Break your old routines')
+            new Phrase('Best of luck'),
+            new Phrase('Anything is possible')
         ];
         this.activePhrase = null;
     }

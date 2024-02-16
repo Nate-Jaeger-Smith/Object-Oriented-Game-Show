@@ -39,3 +39,13 @@ function resetGame(){
         heart.setAttribute('src', 'images/liveHeart.png');
     });
 }
+
+document.addEventListener('keyup', e => {
+    const buttons = keyboard.querySelectorAll('button.key');
+    let pressedButton;
+    
+    buttons.forEach( key => {
+        key.textContent === e.key ? pressedButton = key : null ;
+    });
+    game.handleInteraction(pressedButton);
+})
