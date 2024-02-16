@@ -31,4 +31,29 @@ class Game {
         this.activePhrase = this.getRandomPhrase();
         this.activePhrase.addPhraseToDisplay();
     }
+
+    /**
+    * Checks for winning move
+    * @return {boolean} True if game has been won, false if game wasn't won
+    */
+    checkForWin(){
+        const letters = document.getElementsByClassName('hide letter');
+        return  letters.length === 0;
+    }
+
+    /**
+    * Increases the value of the missed property
+    * Removes a life from the scoreboard
+    * Checks if player has remaining lives and ends game if player is out
+    */
+    removeLife(){
+        let lives = document.getElementsByTagName('img');
+        lives[this.missed].setAttribute('src', 'images/lostHeart.png');
+        this.missed += 1;
+        this.missed === 5 ? this.gameOver() : null;
+    }
+
+    gameOver(){
+        
+    }
 }
