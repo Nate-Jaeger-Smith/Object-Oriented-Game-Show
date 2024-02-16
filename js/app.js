@@ -46,9 +46,10 @@ function resetGame(){
 document.addEventListener('keyup', e => {
     const buttons = keyboard.querySelectorAll('button.key');
     let pressedButton;
-
-    buttons.forEach( key => {
-        key.textContent === e.key ? pressedButton = key : null ;
-    });
-    game.handleInteraction(pressedButton);
+    if (/^[a-z]$/.test(e.key)) {
+        buttons.forEach( key => {
+            key.textContent === e.key ? pressedButton = key : null ;
+        });
+        game.handleInteraction(pressedButton);
+    }
 })
