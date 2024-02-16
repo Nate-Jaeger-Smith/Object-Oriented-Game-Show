@@ -58,13 +58,8 @@ class Game {
     */
     gameOver(gameWon){
         const gameOverMessage = overlay.querySelector('#game-over-message');
-        if (gameWon) {
-            gameOverMessage.textContent = "Congratulations! You've won!"
-            overlay.setAttribute('class', 'win');
-        } else {
-            gameOverMessage.textContent = "Better luck next time!"
-            overlay.setAttribute('class', 'lose');
-        }
+        overlay.setAttribute('class', gameWon ? 'win' : 'lose');
+        gameOverMessage.textContent = gameWon ? "Congratulations! You've won!" : "Better luck next time!" ;
         overlay.style.display = '';
     }
 }
