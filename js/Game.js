@@ -23,7 +23,8 @@ class Game {
     }
     
     /**
-    * Begins game by selecting a random phrase and displaying it to user
+    * Begins game by hiding the overlay, selecting a random phrase,
+    * and displaying that random phrase
     */
     startGame(){
         overlay.style.display = 'none';
