@@ -4,7 +4,8 @@ class Phrase {
     }
     
     /**
-    * Display phrase on game board
+    * Create LI's for each letter in the chosen phrase
+    * Appends LI's to the phrase UL
     */
     addPhraseToDisplay(){
         const phraseDivUl = document.querySelector('#phrase ul');
@@ -23,7 +24,8 @@ class Phrase {
 
     /**
     * Checks if passed letter is in phrase
-    * @param (string) letter - Letter to check
+    * @param {string} letter - Letter to check
+    * @return {boolean} True if letter is in phrase, False if not
     */
     checkLetter(letter){
         return this.phrase.includes(letter);
@@ -31,7 +33,7 @@ class Phrase {
 
     /**
     * Displays passed letter on screen after a match is found
-    * @param (string) letter - Letter to display
+    * @param {string} letter - Letter to display
     */
     showMatchedLetter(letter){
         const matchedLetters = document.getElementsByClassName(letter);
