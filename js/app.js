@@ -40,10 +40,15 @@ function resetGame(){
     });
 }
 
+/**
+ * Event listener for the 'keyup' event
+ * Finds the button corresponding to the key pressed,
+ * then passes button to handleInteraction()
+ */
 document.addEventListener('keyup', e => {
     const buttons = keyboard.querySelectorAll('button.key');
     let pressedButton;
-    
+
     buttons.forEach( key => {
         key.textContent === e.key ? pressedButton = key : null ;
     });
