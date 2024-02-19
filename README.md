@@ -10,15 +10,6 @@ This is a JavaScript-based Phrase Hunter game where players have to guess phrase
 
 3. Guess the hidden phrase by clicking on the on-screen keyboard or by typing on your physical keyboard.
 
-
-## Dependencies
-
-This game relies on the following technologies:
-
-- HTML
-- CSS
-- JavaScript
-
 ## Style Changes
 
 - .wrong qwerty class background-color is a darker red
