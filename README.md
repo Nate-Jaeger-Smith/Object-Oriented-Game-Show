@@ -19,8 +19,5 @@ This is a JavaScript-based Phrase Hunter game where players have to guess phrase
 - Lose overlay is a darker red
 - Font family of H2 overlay changed
 
-## Acknowledgments
-
-This project is inspired by the Phrase Hunter project from the Treehouse Full Stack JavaScript Techdegree. Special thanks to Treehouse for providing the initial project idea and guidance.
 
 Enjoy playing Phrase Hunter!
